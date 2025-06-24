@@ -45,6 +45,5 @@ public class UserController {
             LOGGER.error("Error Occured in getting user details based on empId", e);
         }
         return userDataList;
-
     }
 }
