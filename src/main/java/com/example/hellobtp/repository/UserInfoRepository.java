@@ -14,8 +14,8 @@ public interface UserInfoRepository extends JpaRepository<UserInfo, Long> {
     @Query(value = "select * from user_info where EMAIL_ID=?1 and is_delete=?2 ", nativeQuery = true)
     UserInfo findUserInfoByEmailIdAndIsDelete(String emailId, short isDelete);
 
-    @Query(value = "select * from user_info where emp_id=?1 and is_delete=?2 ", nativeQuery = true)
-    UserInfo findUserInfoByEmpIdAndIsDelete(String empCode, short isDelete);
+    @Query(value = "select * from user_info where emp_code=?1 and is_delete=?2 ", nativeQuery = true)
+    UserInfo findUserInfoByEmpCodeAndIsDelete(String empCode, short isDelete);
 
     @Transactional
     @Modifying

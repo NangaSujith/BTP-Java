@@ -1,16 +1,26 @@
 package com.example.hellobtp.dto;
 
-import com.example.hellobtp.model.BaseEntity;
+import java.time.LocalDateTime;
 
-//@Getter
-//@Setter
-public class UserInfoDTO extends BaseEntity {
+public class UserInfoDTO {
 
 	private Long id;
-	private String empId;
-	private String userName;
+	private Long clientId;
+	private String empCode;
+	private String empName;
+	private String companyCode;
+	private String branchCode;
 	private String emailId;
 	private String password;
+	private Long accessTypeId;
+	private Boolean isActive;
+	private String createdBy;
+	private LocalDateTime createdDate;
+	private String modifiedBy;
+	private LocalDateTime modifiedDate;
+	private Boolean isDelete;
+
+	// Getters and Setters
 
 	public Long getId() {
 		return id;
@@ -20,20 +30,44 @@ public class UserInfoDTO extends BaseEntity {
 		this.id = id;
 	}
 
-	public String getEmpId() {
-		return empId;
+	public Long getClientId() {
+		return clientId;
 	}
 
-	public void setEmpId(String empId) {
-		this.empId = empId;
+	public void setClientId(Long clientId) {
+		this.clientId = clientId;
 	}
 
-	public String getUserName() {
-		return userName;
+	public String getEmpCode() {
+		return empCode;
 	}
 
-	public void setUserName(String userName) {
-		this.userName = userName;
+	public void setEmpCode(String empCode) {
+		this.empCode = empCode;
+	}
+
+	public String getEmpName() {
+		return empName;
+	}
+
+	public void setEmpName(String empName) {
+		this.empName = empName;
+	}
+
+	public String getCompanyCode() {
+		return companyCode;
+	}
+
+	public void setCompanyCode(String companyCode) {
+		this.companyCode = companyCode;
+	}
+
+	public String getBranchCode() {
+		return branchCode;
+	}
+
+	public void setBranchCode(String branchCode) {
+		this.branchCode = branchCode;
 	}
 
 	public String getEmailId() {
@@ -50,5 +84,61 @@ public class UserInfoDTO extends BaseEntity {
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	public Long getAccessTypeId() {
+		return accessTypeId;
+	}
+
+	public void setAccessTypeId(Long accessTypeId) {
+		this.accessTypeId = accessTypeId;
+	}
+
+	public Boolean getIsActive() {
+		return isActive;
+	}
+
+	public void setIsActive(Boolean isActive) {
+		this.isActive = isActive;
+	}
+
+	public String getCreatedBy() {
+		return createdBy;
+	}
+
+	public void setCreatedBy(String createdBy) {
+		this.createdBy = createdBy;
+	}
+
+	public LocalDateTime getCreatedDate() {
+		return createdDate;
+	}
+
+	public void setCreatedDate(LocalDateTime createdDate) {
+		this.createdDate = createdDate;
+	}
+
+	public String getModifiedBy() {
+		return modifiedBy;
+	}
+
+	public void setModifiedBy(String modifiedBy) {
+		this.modifiedBy = modifiedBy;
+	}
+
+	public LocalDateTime getModifiedDate() {
+		return modifiedDate;
+	}
+
+	public void setModifiedDate(LocalDateTime modifiedDate) {
+		this.modifiedDate = modifiedDate;
+	}
+
+	public Boolean getIsDelete() {
+		return isDelete;
+	}
+
+	public void setIsDelete(Boolean isDelete) {
+		this.isDelete = isDelete;
 	}
 }

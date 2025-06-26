@@ -60,7 +60,7 @@ public class UserInfoServiceImpl implements UserInfoService {
         UserInfoDTO userInfoDTO = null;
         short isDelete = 0;
 
-        UserInfo userInfo = userInfoRepository.findUserInfoByEmpIdAndIsDelete(empId, isDelete);
+        UserInfo userInfo = userInfoRepository.findUserInfoByEmpCodeAndIsDelete(empId, isDelete);
         log.error("userDate " + userInfo);
         if (userInfo != null) {
             userInfoDTO = modelMapper.map(userInfo, UserInfoDTO.class);

@@ -22,17 +22,32 @@ public class UserInfo implements Serializable {
 	@Column(name = "ID")
 	private Long id;
 
-	@Column(name = "USER_NAME", length = 50)
-	private String userName;
+	@Column(name = "CLIENT_ID")
+	private Long clientId;
 
-	@Column(name = "EMAIL_ID", length = 250, unique = true, updatable = false)
+	@Column(name = "EMP_CODE", length = 50)
+	private String empCode;
+
+	@Column(name = "EMP_NAME", length = 100)
+	private String empName;
+
+	@Column(name = "COMPANY_CODE", length = 25)
+	private String companyCode;
+
+	@Column(name = "BRANCH_CODE", length = 25)
+	private String branchCode;
+
+	@Column(name = "EMAIL_ID", length = 250)
 	private String emailId;
 
-	@Column(name = "EMP_ID", length = 50)
-	private String empId;
-
-	@Column(name = "PASSWORD", length = 250, nullable = false)
+	@Column(name = "PASSWORD", length = 50)
 	private String password;
+
+	@Column(name = "ACCESS_TYPE_ID")
+	private Long accessTypeId;
+
+	@Column(name = "IS_ACTIVE")
+	private Boolean isActive;
 
 	@Column(name = "CREATED_BY", length = 100)
 	private String createdBy;
